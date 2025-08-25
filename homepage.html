@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="//bizweb.dktcdn.net/100/431/180/themes/969329/assets/favicon.png?1736248125915"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./asset/css/homepage.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- slider -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"
+    />
+
+    <title>Home page</title>
+  </head>
+  <body>
+    <div class="hompage-container">
+      <div class="homepage">
+        <!-- LOGO -->
+        <div class="logo-container">
+          <div class="logo">
+            <a href="">
+              <img
+                src="//bizweb.dktcdn.net/100/431/180/themes/969329/assets/logo.png?1736248125915"
+                alt="logo The Bookshelf Hanoi"
+              />
+            </a>
+          </div>
+        </div>
+        <div class="height-logo"></div>
+        <!-- NAV -->
+        <nav>
+          <div class="menu">
+            <ul class="menu-level-1">
+              <li class="item-level-1">
+                <a href="">KỆ SÁCH CỦA CHÚNG TÔI</a>
+                <ul class="menu-level-2">
+                  <li class="item-level-2" style="border: solid 1px #ebebeb">
+                    <a href="">NGHỆ THUẬT</a>
+                  </li>
+                  <li class="item-level-2"><a href="">SÁCH TRẺ EM</a></li>
+                  <li class="item-level-2"><a href="">CỔ ĐIỂN</a></li>
+                  <li class="item-level-2"><a href="">VIỄN TƯỞNG</a></li>
+                  <li class="item-level-2"><a href="">HỒI KÝ</a></li>
+                </ul>
+              </li>
+              <li class="item-level-1"><a href="">ĐANG GIẢM GIÁ</a></li>
+              <li class="item-level-1"><a href="">KỆ HÀNG HOÁ</a></li>
+              <li class="item-level-1"><a href="">KỆ TẠP TRÍ</a></li>
+              <li class="item-level-1"><a href="">KỆ SÁCH TRẺ EM</a></li>
+              <li class="item-level-1"><a href="">TẠP TRÍ KỆ SÁCH</a></li>
+              <li class="item-level-1"><a href="">KỆ ĐỒ CŨ</a></li>
+            </ul>
+          </div>
+
+          <div class="search-addCart">
+            <div class="icon-search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="icon-bag">
+              <i class="fa-solid fa-bag-shopping"></i>
+            </div>
+          </div>
+        </nav>
+
+        <div class="slider">
+          <div class="item-slider">
+            <img
+              src="//bizweb.dktcdn.net/100/431/180/themes/969329/assets/slider_1.jpg?1736248125915"
+              alt=""
+            />
+          </div>
+          <div class="item-slider">
+            <img
+              src="//bizweb.dktcdn.net/100/431/180/themes/969329/assets/slider_4.jpg?1736248125915"
+              alt=""
+            />
+          </div>
+          <div class="item-slider">
+            <img
+              src="//bizweb.dktcdn.net/100/431/180/themes/969329/assets/slider_3.jpg?1736248125915"
+              alt=""
+            />
+          </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+
+        <script>
+          $(".slider").slick({
+            autoplay: true,
+            infinite: true,
+            dots: true,
+            arrows: true,
+          });
+        </script>
+      </div>
+    </div>
+  </body>
+</html>
