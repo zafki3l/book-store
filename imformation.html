@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        iframe{
+            height: 100vh;
+            width: 250px;
+         }
+        
+        body{
+            display: flex;
+            width: 100vw;
+            height: 100vh;
+            background-color: #ca122f;
+         }
+
+         .content-right{
+            width: 100vw;
+            height: 60px;
+            background-color: #faf9ea;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            padding: 10px 50px;
+         }
+
+         .info{
+            width: 90%;
+            height: 500px;
+            background-color: #faf9ea;
+            border-radius: 10px;
+            margin: 100px 50px;
+         }
+
+         .info1{
+            background-color: #FFDE5C;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            padding: 10px;
+            color: black;
+            margin-bottom: 20px;
+         }
+
+         .info2{
+            .p1{
+                margin: 5px 20px 5px 60px;
+            }
+            .d1{
+                display: flex;
+                margin: 20px 0;
+            }
+            .name{
+                input{
+                    padding-right:  200px; ;
+                }
+            }
+
+            .gender{
+                input{
+                    margin: 0 10px;
+                }
+            }
+
+            .submit{
+                input{
+                    padding: 10px 30px;
+                    margin: 15px 20px 5px 60px;
+                    border-radius: 10px;
+                    border: none;
+                    background-color: white;
+                    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+                }
+            }
+         }
+
+    
+         
+    </style>
+</head>
+<body>
+    <iframe src="./sidebar.html" frameborder="0">
+    </iframe>
+        <div class="content-right">
+            <h1>Thông tin tài khoản</h1>
+
+            <div class="info">
+                <div class="info1">
+                    <h2>Quản lý thông tin</h2>
+                </div>
+
+                <div class="info2">
+                    <div class="name d1">
+                        <p class="p1">Ten</p>
+                        <input type="text" class="input-name">
+                    </div>
+
+                    <div class="email d1">
+                        <p class="p1">Email</p>
+                        <p class="p2">abc123@gmail.com</p>
+                    </div>
+
+                    <div class="phone d1">
+                        <p class="p1">So dien thoai</p>
+                        <p class="p2">0987654321</p>
+                    </div>
+
+                    <div class="gender d1">
+                        <p class="p1">Gioi tinh</p>
+                        <input type="radio" name="gender" value="nam"> Nam
+                        <input type="radio" name="gender" value="nu"> Nu
+                    </div>
+
+                    <div class="birth d1">
+                        <p class="p1">Ngay sinh</p>
+                        <input type="date">
+                    </div>
+
+                    <div class="submit d1">
+                        <input type="submit">
+                    </div>
+                </div>
+            </div>
+
+
+
+            
+        </div>
+</body>
+</html>
