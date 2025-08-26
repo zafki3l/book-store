@@ -4,17 +4,18 @@
     box-sizing: border-box;
 }
 
-body{
+/* body{
     width: 100vw;
     height: 100vh;
     background-color: #ca122f;
-}
+} */
 
 .sidebar{
     width: 250px;
     height: 100vh;
     background-color: #faf9ea;
     color: #111014;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .user {
