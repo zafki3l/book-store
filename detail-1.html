@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detail</title>
+    <link
+      rel="icon"
+      href="//bizweb.dktcdn.net/100/431/180/themes/969329/assets/favicon.png?1736248125915"
+      type="image/x-icon"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"
+    />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+      /*Phần header */
+      .nav-menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;
+        padding: 10px 100px;
+        background-color: #111014;
+        color: #faf9ea;
+        font-size: 14px;
+      }
+
+      .nav-left,
+      .nav-right {
+        display: flex;
+        gap: 20px;
+      }
+      .nav-right a {
+        color: #faf9ea;
+        text-decoration: none;
+        font-size: 10px;
+      }
+
+      /* brand*/
+      .brand {
+        background-color: #faf9ea;
+        color: #111014;
+        padding: 30px 100px;
+        font-size: 30px;
+        text-align: center;
+      }
+      /*thể loại*/
+      .dropdown button {
+        background-color: #faf9ea;
+        color: #111014;
+        padding: 10px 15px;
+        border: none;
+        cursor: pointer;
+        font-size: 20px;
+      }
+      .dropdown a {
+        display: block;
+        color: #111014;
+        text-decoration: none;
+        padding: 10px 15px;
+      }
+      .dropdown .content {
+        display: none;
+        position: absolute;
+        background-color: #faf9ea;
+        min-width: 100px;
+        box-shadow: 2px 2px 5px;
+      }
+      .dropdown:hover .content {
+        display: block;
+      }
+      .dropdown a:hover {
+        background-color: #ca122f;
+      }
+      /* nav bar*/
+      body {
+        margin: 0px;
+      }
+      main {
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+      h1 {
+        text-align: center;
+      }
+      .navbar ul {
+        list-style-type: none;
+        background-color: #faf9ea;
+        padding: 0px;
+        margin: 0px;
+        overflow: hidden;
+      }
+      .navbar a {
+        color: #111014;
+        text-decoration: none;
+        padding: 15px;
+        display: block;
+        text-align: center;
+      }
+      .navbar li {
+        float: left;
+      }
+      /* search box*/
+      .header .user-menu {
+        background-color: #faf9ea;
+        color: #111014;
+        display: flex;
+        gap: 20px;
+        font-size: 20px;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .user-menu .search-bar {
+        min-height: 35px;
+        font-size: 20px;
+        border-radius: 6px;
+        border: 1 solid #111014;
+        outline: none;
+        width: 600px;
+      }
+
+      .search-bar {
+        display: flex;
+        align-items: center;
+        border: 2px solid #ccc;
+        border-radius: 30px;
+        padding: 5px 15px;
+        background-color: #fff;
+        width: 300px;
+        transition: box-shadow 0.3s ease;
+      }
+
+      .search-bar:hover {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .search-bar input {
+        border: none;
+        outline: none;
+        flex: 1;
+        font-size: 16px;
+      }
+
+      .search-bar button {
+        background: none;
+        border: none;
+        font-size: 18px;
+        cursor: pointer;
+        margin-top: 5px;
+      }
+      /*giỏ hàng*/
+      :root {
+        --primary: #ca122f;
+        --bg: #faf9ea;
+        --ink: #111014;
+      }
+      .cart-btn {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        padding: 0.5rem 0.75rem;
+        border: 1px solid #e5e5e5;
+        border-radius: 0.5rem;
+        background: var(--bg);
+        color: var(--ink);
+        text-decoration: none;
+      }
+      .cart-ico {
+        width: 1.25em;
+        height: 1.25em;
+      } /* icon theo cỡ chữ */
+      .cart-btn:hover {
+        color: var(--primary);
+      }
+
+      .badge {
+        position: absolute;
+        top: -6px;
+        right: -6px;
+        min-width: 18px;
+        height: 18px;
+        padding: 0 6px;
+        border-radius: 999px;
+        background: var(--primary);
+        color: #fff;
+        font: 600 12px/18px system-ui;
+        text-align: center;
+      }
+
+      /* MAIN */
+      /* infor-book */
+      .infor-book {
+        display: flex;
+        padding: 0px 100px;
+        gap: 10px;
+        margin: 40px 0px;
+        /* margin-bottom: 30px; */
+        .img-book {
+          img {
+            width: 470px;
+          }
+        }
+        .text-infor {
+          .name-book {
+            h1 {
+              text-align: start;
+              font-weight: 100;
+              color: #074e8b;
+              margin-bottom: 15px;
+            }
+          }
+          .content-infor {
+            .brand-book {
+              color: #074e8b;
+              margin-bottom: 15px;
+            }
+            .price-book {
+              display: flex;
+              align-items: end;
+              gap: 16px;
+              margin-bottom: 20px;
+              h1 {
+                color: #074e8b;
+              }
+              p {
+                color: #acacac;
+                text-decoration: line-through;
+              }
+            }
+            .content-summary {
+              text-align: justify;
+              font-style: italic;
+              font-size: 14px;
+              font-weight: 100;
+              line-height: 24px;
+              margin-bottom: 70px;
+              span {
+                font-weight: 700;
+              }
+            }
+            .btn-order {
+              button {
+                color: white;
+                background-color: black;
+                border: none;
+                width: max-content;
+                padding: 16px 20px;
+                font-weight: 700;
+                cursor: pointer;
+              }
+              button:hover {
+                background-color: #074e8b;
+              }
+            }
+          }
+        }
+      }
+
+      /* description-book */
+      .description-book {
+        padding: 0 100px;
+        margin-bottom: 50px;
+        .card-description {
+          width: max-content;
+          background-color: black;
+          padding: 14px 24px;
+          h1 {
+            font-size: 14px;
+            color: white;
+            font-weight: 700;
+          }
+        }
+        .content-description {
+          padding: 30px;
+          box-shadow: rgba(14, 63, 126, 0.06) 0px 0px 0px 1px,
+            rgba(42, 51, 70, 0.03) 0px 1px 1px -0.5px,
+            rgba(42, 51, 70, 0.04) 0px 2px 2px -1px,
+            rgba(42, 51, 70, 0.04) 0px 3px 3px -1.5px,
+            rgba(42, 51, 70, 0.03) 0px 5px 5px -2.5px,
+            rgba(42, 51, 70, 0.03) 0px 10px 10px -5px,
+            rgba(42, 51, 70, 0.03) 0px 24px 24px -8px;
+          p {
+            color: #074e8b;
+            line-height: 25px;
+            span {
+              font-weight: 700;
+            }
+          }
+          .content-first {
+            font-weight: 700;
+            margin-bottom: 30px;
+          }
+          .content-second {
+            margin-bottom: 30px;
+          }
+        }
+      }
+
+      /* other-products */
+      .other-products {
+        padding: 0 100px;
+        margin-bottom: 30px;
+        .title-other-products {
+          width: max-content;
+          text-align: start;
+          margin-bottom: 30px;
+          h1 {
+            font-size: 24px;
+            color: #074e8b;
+          }
+        }
+
+        .list-product {
+          display: flex;
+          justify-content: space-around;
+          .item-product {
+            width: 270px;
+            a {
+              text-decoration: none;
+            }
+            .img-other-products {
+              img {
+                width: 100%;
+              }
+              margin-bottom: 16px;
+            }
+            .description-other-products {
+              .name-other-products {
+                margin-bottom: 6px;
+                font-size: 16px;
+              }
+              h3 {
+                font-size: 16px;
+              }
+            }
+          }
+        }
+      }
+
+      /* FOOTER */
+      .footer {
+        background-color: #faf9ea;
+        color: #111014;
+      }
+      footer {
+        text-align: center;
+        margin-top: 40px;
+        font-size: 14px;
+      }
+
+      footer .footer-container hr {
+        border: none;
+        height: 1px;
+        background: rgba(255, 255, 255, 0.3);
+        margin-bottom: 15px;
+        width: 80%;
+      }
+
+      footer p {
+        margin: 5px 0;
+        opacity: 0.8;
+      }
+
+      .bottom {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+        background: #faf9ea;
+        padding: 10px;
+        justify-content: space-between;
+        margin-left: 100px;
+        margin-right: 100px;
+      }
+
+      .bottom p {
+        font-size: 20px;
+        margin-bottom: 20px;
+        font-weight: bold;
+      }
+
+      .bottom li {
+        margin-top: 15px;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <!--header 1 -->
+      <div class="header">
+        <ul type="none" class="nav-menu">
+          <div class="nav-left">
+            <li>Phone number: 0846378123</li>
+            <li>Email: bloblahaha123@gmail.com</li>
+          </div>
+
+          <div class="nav-right">
+            <li>
+              <a href=""><h1>Login</h1></a>
+            </li>
+            <li>
+              <a href=""><h1>Register</h1></a>
+            </li>
+          </div>
+        </ul>
+
+        <!--tên brand -->
+        <div class="brand">
+          <p><b style="color: #111014">The Wind-up Bird Chronicle</b></p>
+        </div>
+        <hr />
+        <!--thể loại , searchbox , giỏ hàng -->
+        <ul type="none" class="user-menu">
+          <div class="dropdown">
+            <button>Category</button>
+            <div class="content">
+              <a href="">Literary Fiction</a>
+              <a href="">Historical Fiction</a>
+              <a href="">Science Fiction</a>
+              <a href="">Mystery</a>
+              <a href="">Thriller</a>
+              <a href="">Adventure</a>
+              <a href="">Post-Apocalyptic</a>
+              <a href="">Dystopian</a>
+              <a href="">Fairy Tales & Folklore</a>
+            </div>
+          </div>
+
+          <nav class="navbar">
+            <ul>
+              <li><a href="homepage (1).html">Home</a></li>
+              <li><a href="onsale.html">On sale</a></li>
+              <li><a href="bestseller.html">Best seller</a></li>
+            </ul>
+          </nav>
+
+          <div class="search-bar">
+            <input type="text" placeholder="Search books..." />
+            <button type="submit"><i class="bxr bx-search"></i></button>
+          </div>
+          <a class="cart-btn" href="giohang.html" aria-label="Giỏ hàng">
+            <svg class="cart-ico" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M3 4h2l2 10h9l2-6H7"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <circle cx="10" cy="19" r="1.6" fill="currentColor" />
+              <circle cx="17" cy="19" r="1.6" fill="currentColor" />
+            </svg>
+            <span class="badge" aria-hidden="true"></span>
+          </a>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <!-- infor-book -->
+      <div class="infor-book">
+        <div class="img-book">
+          <img
+            src="//bizweb.dktcdn.net/thumb/1024x1024/100/431/180/products/c5bc4f9e-d6fb-4fd2-a506-ffe473f31d72.jpg?v=1715570259813"
+            alt=""
+          />
+        </div>
+
+        <div class="text-infor">
+          <div class="name-book">
+            <h1>Singapore’s Grand Strategy</h1>
+          </div>
+
+          <div class="content-infor">
+            <p class="brand-book">
+              Brand: National University of Singapore | Status: Hết hàng
+            </p>
+            <div class="price-book">
+              <h1>800.000₫</h1>
+              <p>1.000.000₫</p>
+            </div>
+            <p class="content-summary">
+              "This book offers a powerful account of the evolution of
+              Singapore’s grand strategy, stretching from the 1960s to the
+              2000s. It shows that size does not limit the ability of states to
+              develop a successful objectives-resources alignment. It will
+              generate further inquiry into the conditions that drive small
+              states' strategic competence."
+              <span
+                >– Thierry Balzacq, Sciences Po, Center for International
+                Studies, Paris</span
+              >
+            </p>
+
+            <div class="btn-order">
+              <button class="order">THÊM VÀO GIỎ HÀNG</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- description-book -->
+      <div class="description-book">
+        <div class="card-description">
+          <h1>MÔ TẢ</h1>
+        </div>
+        <div class="content-description">
+          <p class="content-first">
+            Even small states can have grand strategies. Singapore, despite its
+            poor natural resource endowment, small population and territory has
+            often been described as punching above its weight in international
+            affairs.
+          </p>
+          <p class="content-second">
+            Part of this stems from the way Singapore integrates the different
+            diplomatic, political and defence-oriented tools at its disposal in
+            a strategic manner. This is a fresh and useful diplomatic, defence,
+            and security history of Singapore, from independence in 1965 through
+            the 2020s period of strategic realignment. Most previous studies of
+            grand strategy have focused on super- or at least middle powers, but
+            Ang's book builds an important contribution to international
+            relations and strategic studies in showing how the concept can help
+            explain the strategic posture and achievements of small states as
+            well. Moreover, he brings a historian's perspective to a subject
+            usually tackled by political scientists. The result will be useful
+            and important for scholars in these fields. The author's
+            well-crafted retelling of the Singapore story from an external
+            perspective will be compelling for more general audiences as well.
+          </p>
+          <p>
+            "This is a solid and insightful study of the fundamentals of
+            Singapore’s foreign and defence policies, explained as an
+            overarching Grand Strategy. Developed by three of Singapore’s most
+            influential strategic thinkers--Lee Kuan Yew, Goh Keng Swee and S.
+            Rajaratnam--the Singapore Grand Strategy, initially driven by the
+            compulsions of a new and small state seeking to survive in a
+            difficult neighbourhood, eventually evolved into a set of underlying
+            principles consistently guiding the country’s international and
+            defence posture since 1965. The core elements of the Grand Strategy
+            are clearly explained in this carefully researched and well
+            contextualised study." <span>– Tan Tai Yong</span>, Singapore
+            University of Social Sciences
+          </p>
+        </div>
+      </div>
+      <!-- other-products -->
+      <div class="other-products">
+        <div class="title-other-products">
+          <h1>Sản phẩm cùng loại</h1>
+        </div>
+        <div class="list-product">
+          <div class="item-product">
+            <a href="">
+              <div class="img-other-products">
+                <img
+                  src="//bizweb.dktcdn.net/thumb/large/100/431/180/products/thiet-ke-chua-co-ten-3.jpg?v=1651753686300"
+                  alt=""
+                />
+              </div>
+              <div class="description-other-products">
+                <p class="name-other-products">The State of Affairs</p>
+                <h3>350.000₫</h3>
+              </div>
+            </a>
+          </div>
+          <div class="item-product">
+            <a href="">
+              <div class="img-other-products">
+                <img
+                  src="//bizweb.dktcdn.net/thumb/large/100/431/180/products/1-85ec7f4e-f465-4c2b-901d-a6327df256a1.jpg?v=1653388891630"
+                  alt=""
+                />
+              </div>
+              <div class="description-other-products">
+                <p class="name-other-products">The Inventions of Wings</p>
+                <h3>264.000₫</h3>
+              </div>
+            </a>
+          </div>
+          <div class="item-product">
+            <a href="">
+              <div class="img-other-products">
+                <img
+                  src="//bizweb.dktcdn.net/thumb/large/100/431/180/products/sad-book.png?v=1629028901217"
+                  alt=""
+                />
+              </div>
+              <div class="description-other-products">
+                <p class="name-other-products">Michael Rosen's Sad Book</p>
+                <h3>150.000₫</h3>
+              </div>
+            </a>
+          </div>
+          <div class="item-product">
+            <a href="">
+              <div class="img-other-products">
+                <img
+                  src="//bizweb.dktcdn.net/thumb/large/100/431/180/products/cfdcda71-c62e-45d6-9c25-7482f5393cb2.jpg?v=1721892293120"
+                  alt=""
+                />
+              </div>
+              <div class="description-other-products">
+                <p class="name-other-products">Crying in H Mart</p>
+                <h3>330.000₫</h3>
+              </div>
+            </a>
+          </div>
+          <div class="item-product">
+            <a href="">
+              <div class="img-other-products">
+                <img
+                  src="//bizweb.dktcdn.net/thumb/large/100/431/180/products/confess.png?v=1647067143110"
+                  alt=""
+                />
+              </div>
+              <div class="description-other-products">
+                <p class="name-other-products">Confess</p>
+                <h3>270.000₫</h3>
+              </div>
+            </a>
+          </div>
+          <div class="item-product">
+            <a href="">
+              <div class="img-other-products">
+                <img
+                  src="///bizweb.dktcdn.net/thumb/large/100/431/180/products/6b08f1a5-9522-4c13-8bfb-73509d5f0f28.jpg?v=1655539236980"
+                  alt=""
+                />
+              </div>
+              <div class="description-other-products">
+                <p class="name-other-products">November 9</p>
+                <h3>300.000₫</h3>
+              </div>
+            </a>
+          </div>
+          <div class="item-product">
+            <a href="">
+              <div class="img-other-products">
+                <img
+                  src="//bizweb.dktcdn.net/thumb/large/100/431/180/products/a60aee95-bc20-4568-8af1-e79afef1f589.jpg?v=1720239075407"
+                  alt=""
+                />
+              </div>
+              <div class="description-other-products">
+                <p class="name-other-products">Death in the Afternoon - Used</p>
+                <h3>200.000₫</h3>
+              </div>
+            </a>
+          </div>
+          <div class="item-product">
+            <a href="">
+              <div class="img-other-products">
+                <img
+                  src="//bizweb.dktcdn.net/thumb/1024x1024/100/431/180/products/2e639c37-1c6e-44f0-bcff-7f70096e17a3.jpg?v=1721206084360"
+                  alt=""
+                />
+              </div>
+              <div class="description-other-products">
+                <p class="name-other-products">
+                  The Secret Lives of the Elements - Used
+                </p>
+                <h3>600.000₫</h3>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+
+        <script>
+          $(".list-product").slick({
+            autoplay: true,
+            infinite: true,
+            dots: true,
+            arrows: true,
+            slidesToShow: 4,
+            slidesToScroll: 4,
+          });
+        </script>
+      </div>
+    </main>
+    <!-- Footer -->
+    <footer>
+      <div class="footer">
+        <hr />
+        <ul class="bottom">
+          <li>
+            <p>About us</p>
+            <br />
+            <hr />
+            <ul type="none">
+              <li>Main menu</li>
+              <li>About us</li>
+              <li>Our shelf</li>
+            </ul>
+          </li>
+
+          <li>
+            <p>Instructions</p>
+            <br />
+            <hr />
+            <ul type="none">
+              <li>How to buy</li>
+              <li>Check out</li>
+              <li>Shipping and return policy</li>
+              <li>Terms of service</li>
+              <li>Chính sách thanh toán</li>
+              <li>Chính sách khiếu nại</li>
+              <li>Chính sách vận chuyện</li>
+              <li>Chính sách bảo hành</li>
+              <li>Chính sách kiểm hàng</li>
+              <li>Chính sách bảo mật</li>
+            </ul>
+          </li>
+
+          <li>
+            <p>Main menu</p>
+            <br />
+            <hr />
+            <ul type="none">
+              <li>CÔNG TY TRÁCH NHIỆM HỮU HẠN</li>
+              <li>CHIM VẶN DÂY CÓT</li>
+              <li>Email: Th41299292@fake.email.com</li>
+              <li>Địa chỉ: Phố 123, số 321 Hà Nội</li>
+              <li>Hoàn Kiếm, Hà Nội</li>
+            </ul>
+          </li>
+          <li>
+            <p>Follow us at</p>
+            <br />
+            <hr />
+            <ul type="none">
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">Instagram</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>
