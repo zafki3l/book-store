@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         * {
             margin: 0;
@@ -34,7 +34,7 @@
             }
          }
 
-         .o-m{
+         .b-m{
             width: 90%;
             height: 500px;
             background-color: #faf9ea;
@@ -42,7 +42,7 @@
             margin: 100px 50px;
          }
 
-          .o-m1{
+          .b-m1{
             background-color: #FFDE5C;
             border-top-left-radius: 10px;
             border-top-right-radius: 10px;
@@ -85,13 +85,14 @@
                         border: none;
                         border-radius: 10px;
                         background-color: #A953F7;
-                        color: white;
+                        color: #e2e0c5;
                     }
             }
         }
 
         .search{
             padding-left: 40px;
+            margin-right: 20px;
             input{
                 border-radius: 10px;
                 border: 2px solid black;
@@ -100,6 +101,18 @@
 
         }
 
+        .navbox {
+            display: flex;
+        }
+
+        .add-book{
+            button{
+                padding: 16px 15px;
+                border-radius: 10px;
+                border: 2px solid black;
+                background-color: #e2e0c5;
+            }
+        }
 
     </style>
 </head>
@@ -110,34 +123,40 @@
     <div class="content-right">
 
         <div class="content-right">
-            <h1>Quan ly don hang</h1>
+            <h1>Quan ly sach</h1>
         </div>
 
-        <div class="o-m">
-            <div class="o-m1">
-                <h2>Danh sach don hang</h2>
+        <div class="b-m">
+            <div class="b-m1">
+                <h2>Danh sach</h2>
+            </div>
+            <div class="navbox">
+                <div class="search">
+                    <input type="text" placeholder="Tim kiem theo ID, Ten,...">
+                </div>
+
+                <div class="add-book">
+                    <button>Them sach</button>
+                </div>
             </div>
 
-            <div class="search">
-                <input type="text" placeholder="Tim kiem theo ID, Ten, Thoi gian,...">
-            </div>
 
             <div class="table">
                 <table style="width: 96%;">
                     <tr>
-                        <th>ID</th>
-                        <th style="width: 20%;">Ten nguoi mua</th>
+                        <th>STT</th>
                         <th style="width: 20%;">Ten sach</th>
-                        <th style="width: 20%;">Thoi gian dat hang</th>
+                        <th style="width: 20%;">Ngay them</th>
+                        <th style="width: 20%;">So luong</th>
                         <th style="width: 15%;">Trang thai</th>
                         <th style="width: 20%;">Hanh dong</th>
                     </tr>
                     <tr>
                         <td>1</td>
-                        <td>User 1</td>
                         <td>Sach 1</td>
                         <td>01/01/2026</td>
-                        <td>Da hoan thanh</td>
+                        <td>30</td>
+                        <td>Con hang</td>
                         <td>
                             <button class="b1"><i class="fa-solid fa-pen"></i></button>
                             <button class="b1"><i class="fa-solid fa-trash"></i></button>
@@ -147,10 +166,10 @@
                     
                     <tr>
                         <td>2</td>
-                        <td>User 2</td>
                         <td>Sach 2</td>
                         <td>02/01/2026</td>
-                        <td>Dang thuc hien</td>
+                        <td>20</td>
+                        <td>Con hang</td>
                         <td>
                             <button class="b1"><i class="fa-solid fa-pen"></i></button>
                             <button class="b1"><i class="fa-solid fa-trash"></i></button>
@@ -160,10 +179,10 @@
 
                     <tr>
                         <td>3</td>
-                        <td>User 3</td>
                         <td>Sach 3</td>
                         <td>02/01/2026</td>
-                        <td>Cho xac nhan</td>
+                        <td>0</td>
+                        <td>Het hang</td>
                         <td>
                             <button class="b1"><i class="fa-solid fa-pen"></i></button>
                             <button class="b1"><i class="fa-solid fa-trash"></i></button>
@@ -173,10 +192,10 @@
 
                     <tr>
                         <td>4</td>
-                        <td>User 4</td>
                         <td>Sach 4</td>
                         <td>02/01/2026</td>
-                        <td>Da huy</td>
+                        <td>3</td>
+                        <td>Con it</td>
                         <td>
                             <button class="b1"><i class="fa-solid fa-pen"></i></button>
                             <button class="b1"><i class="fa-solid fa-trash"></i></button>
@@ -186,5 +205,6 @@
                 </table>
 
             </div>
+    
 </body>
 </html>
