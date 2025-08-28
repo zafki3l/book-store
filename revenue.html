@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        iframe{
+            height: 100vh;
+            width: 250px;
+         }
+        
+        body{
+            display: flex;
+            width: 100vw;
+            height: 100vh;
+            background-color: #ca122f;
+         }
+
+        .content-right{
+            width: 81vw;
+            height: 60px;
+            background-color: #faf9ea;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            h1{
+                padding: 10px 50px;
+            }
+         }
+
+         .b-m{
+            width: 90%;
+            height: 600px;
+            background-color: #faf9ea;
+            border-radius: 10px;
+            margin: 60px 50px;
+            padding-top: 30px;
+         }
+
+          .b-m1{
+            background-color: #FFDE5C;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            padding: 10px;
+            color: black;
+            margin-bottom: 20px;
+         }
+
+         .order-total{
+            display: flex;
+            width: 500px;
+            height: 100px;
+            background-color: white;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            margin-left: 30px;
+            .shopping{
+                width: 100px;
+                height: 100px;
+                background-color: #2ECEEA;
+                color: white;
+                display: grid;
+                place-items: center;
+                font-size: 50px;
+            }     
+         }
+
+         .user-total{
+            margin-top: 40px;
+            width: 500px;
+            height: 100px;
+            background-color: white;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            margin-left: 30px;
+            .group{
+                display: flex;
+            }
+            .group-people{
+                width: 100px;
+                height: 100px;
+                background-color: #CB3B3F;
+                color: white;
+                display: grid;
+                place-items: center;
+                font-size: 50px;
+            }
+            
+         }
+
+        .user-view{
+            margin-top: 40px;
+            width: 500px;
+            height: 100px;
+            background-color: white;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            margin-left: 30px;
+            .group{
+                display: flex;
+            }
+            .view-people{
+                width: 100px;
+                height: 100px;
+                background-color: #EA972F;
+                color: white;
+                display: grid;
+                place-items: center;
+                font-size: 50px;
+            }
+            
+         }
+
+         .money{
+            display: flex;
+            margin-top: 40px;
+            width: 500px;
+            height: 100px;
+            background-color: white;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            margin-left: 30px;
+            .money-icon{
+                width: 100px;
+                height: 100px;
+                background-color: #21B75F;
+                color: white;
+                display: grid;
+                place-items: center;
+                font-size: 50px;
+            }     
+         }
+
+         .about{
+            margin: 5px 10px;
+            line-height: 1.8;
+         }
+
+    </style>
+</head>
+<body>
+    <iframe src="./sidebar.html" frameborder="0"></iframe>
+
+
+    <div class="content-right">
+
+        <div class="content-right">
+            <h1><i style="margin-right: 15px;" class="fa-solid fa-bars"></i>Thong ke doanh thu</h1>
+        </div>
+
+        <div class="b-m">
+            <div class="total">
+
+                <div class="order-total">
+
+                    <div class="shopping">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                    <div class="about">
+                        <h3>TONG SO DON HANG</h3>
+                        <p>10 (<a href="" style="text-decoration: none; color: rgb(85, 85, 198);">Chi tiet</a>)</p>
+                    </div>
+
+                </div>
+
+                <div class="user-total">
+
+                    <div class="group">
+                        <div class="group-people">
+                            <i class="fa-solid fa-people-group"></i>
+                        </div>
+                        <div class="about">
+                            <h3>TONG SO SAN PHAM</h3>
+                            <p>20 (<a href="" style="text-decoration: none; color: rgb(85, 85, 198);">Chi tiet</a>)</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="user-view">
+
+                    <div class="group">
+                        <div class="view-people">
+                            <i class="fa-solid fa-eye"></i>
+                        </div>
+                        <div class="about">
+                            <h3>TONG SO NGUOI XEM SAN PHAM</h3>
+                            <p>312 (<a href="" style="text-decoration: none; color: rgb(85, 85, 198);">Chi tiet</a>)</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="income">
+                    <div class="money">
+
+                        <div class="money-icon">
+                            <i class="fa-solid fa-dollar-sign"></i>
+                        </div>
+                        <div class="about">
+                            <h3>TONG THU NHAP</h3>
+                            <p>10.500.000 dong (<a href="" style="text-decoration: none; color: rgb(85, 85, 198);">Chi tiet</a>)</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+</body>
+</html>
